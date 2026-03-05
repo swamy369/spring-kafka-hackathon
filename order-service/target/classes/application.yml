@@ -1,4 +1,9 @@
 
 spring:
-  kafka:
-    bootstrap-servers: localhost:9092
+  application:
+    name: order-service
+  config:
+    import: configserver:http://localhost:8888
+  cloud:
+    config:
+      fail-fast: true

@@ -1,4 +1,9 @@
 
 spring:
-  kafka:
-    bootstrap-servers: localhost:9092
+  application:
+    name: fraud-service
+  config:
+    import: configserver:http://localhost:8888
+  cloud:
+    config:
+      fail-fast: true
